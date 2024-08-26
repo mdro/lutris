@@ -1,0 +1,41 @@
+{
+    "human_name": "DuckStation",
+    "description": "Sony Playstation emulator",
+    "platforms": ["Sony PlayStation"],
+    "runner_executable": "duckstation/DuckStation-x64.AppImage",
+    "runnable_alone": true,
+    "flatpak_id": "org.duckstation.DuckStation",
+    "download_url": "https://github.com/stenzek/duckstation/releases/download/latest/DuckStation-x64.AppImage",
+    "game_options": [
+        {
+            "option": "main_file",
+            "type": "file",
+            "label": "Disk image",
+            "help": "Supports .cue/.iso/.ecm/.mds/.chd/.pbp",
+            "default_path": "game_path"
+        }
+    ],
+    "runner_options": [
+
+        {
+            "option": "fullscreen",
+            "type": "bool",
+            "label": "Fullscreen",
+            "default": false,
+            "argument": "-fullscreen"
+        },
+        {
+            "option": "autoclose",
+            "type": "bool",
+            "label": "Close DuckStation on game exit",
+            "default": false,
+            "argument": "-batch"
+        }
+    ],
+    "system_options_override": [
+        {
+            "option": "disable_runtime",
+            "default": true
+        }
+    ]
+}
